@@ -28,7 +28,6 @@
   },
   "version": "2.15.2",
   "license": "Apache-2.0",
-  "private": false,
   "dependencies": {
     "@codler/react-native-keyboard-aware-scroll-view": "1.0.1",
     "@react-native-community/datetimepicker": "^3.0.2",
@@ -37,6 +36,7 @@
     "clamp": "^1.0.1",
     "color": "~3.1.2",
     "create-react-class": "^15.6.3",
+    "deprecated-react-native-prop-types": "^5.0.0",
     "eslint-config-prettier": "^6.0.0",
     "fs-extra": "^2.0.0",
     "jest-react-native": "^18.0.0",
@@ -76,7 +76,6 @@
   "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
   "main": "dist/src/index.js",
   "typings": "./index.d.ts",
-  "optionalDependencies": {},
   "peerDependencies": {
     "react": ">=16.4.1",
     "react-native": ">=0.56.0"
@@ -94,5 +93,6 @@
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/NativeBase"
-  }
+  },
+  "packageManager": "yarn@4.9.0+sha512.5f5f00843eae735dfab6f0442524603e987ceca55e98b36eb0120f4e58908e5b1406545321e46627dca97d15d562f23dc13fb96cabd4e6bc92d379f619001e4e"
 }
