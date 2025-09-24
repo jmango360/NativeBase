@@ -22,16 +22,10 @@ const DefaultTabBar = createReactClass({
     activeTextColor: PropTypes.string,
     inactiveTextColor: PropTypes.string,
     disabledTextColor: PropTypes.string,
-    tabStyle: PropTypes.shape({
-      style: PropTypes.any,
-    }),
+    tabStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     renderTab: PropTypes.func,
-    underlineStyle: PropTypes.shape({
-      style: PropTypes.any,
-    }),
-    tabContainerStyle: PropTypes.shape({
-      style: PropTypes.any,
-    }),
+    underlineStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    tabContainerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     accessible: PropTypes.array,
     accessibilityLabel: PropTypes.array
   },
@@ -82,7 +76,7 @@ const DefaultTabBar = createReactClass({
     }
     const accessibilityState = {
       disabled: isDisabled ? true : false,
-      selected: isTabActive ? true : false,
+      selected: isTabActive ? true : false
     };
     if (typeof name === 'string') {
       return (
@@ -91,7 +85,7 @@ const DefaultTabBar = createReactClass({
           disabled={isDisabled}
           key={name}
           accessible={accessible}
-          accessibilityRole='tab'
+          accessibilityRole="tab"
           accessibilityLabel={accessibilityLabel}
           accessibilityState={accessibilityState}
           onPress={() => onPressHandler(page)}
@@ -119,7 +113,7 @@ const DefaultTabBar = createReactClass({
         disabled={isDisabled}
         key={_.random(1.2, 5.2)}
         accessible={accessible}
-        accessibilityRole='tab'
+        accessibilityRole="tab"
         accessibilityLabel={accessibilityLabel}
         accessibilityState={accessibilityState}
         onPress={() => onPressHandler(page)}
